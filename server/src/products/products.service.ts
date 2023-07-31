@@ -5,9 +5,8 @@ import { PrismaService } from 'src/prisma/prisma.service';
 
 @Injectable()
 export class ProductsService {
+  constructor(private prisma: PrismaService) {}
 
-  constructor(private prisma: PrismaService){}
-  
   create(createProductDto: CreateProductDto) {
     return this.prisma.product.create({
       data: createProductDto,
@@ -18,7 +17,7 @@ export class ProductsService {
     return this.prisma.product.findMany({
       orderBy: {
         createdAt: 'desc',
-      }
+      },
     });
   }
 
@@ -26,7 +25,7 @@ export class ProductsService {
     return this.prisma.product.findUniqueOrThrow({
       where: {
         id,
-      }
+      },
     });
   }
 
