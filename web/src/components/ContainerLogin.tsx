@@ -4,9 +4,8 @@ export default function ContainerLogin() {
             <div>
                 <form action="">
                     <label htmlFor="">Login</label>
-                    <input type="text" />
-                    <label htmlFor="">senha</label>
-                    <input type="text" />
+                    <input type="text" placeholder="usuario" />
+                    <input type="text" placeholder="senha" />
                 </form>
             </div>
         </>
